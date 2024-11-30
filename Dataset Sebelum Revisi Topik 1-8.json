@@ -1,0 +1,159 @@
+{
+      "intents": [
+            {
+                  "intent": "InformasiDasar",
+                  "text": [
+                        "Apa itu HIV?",
+                        "Apa itu AIDS?",
+                        "Apa perbedaan antara HIV dan AIDS?",
+                        "Apa itu infeksi oportunistik?",
+                        "Berapa lama waktu yang biasanya dibutuhkan untuk berkembang dari infeksi HIV menjadi AIDS?",
+                        "Apa itu masa jendela (window period)?"
+                  ],
+                  "responses": [
+                        "Singkatan  dari  Human  Immunodeficiency Virus,  sebuah  virus  yang  menyerang  sistem  kekebalan tubuh manusia.",
+                        "Singkatan dari Acquired Immune Deficiency Syndrome, kumpulan gejala klinis akibat penurunan sistem imun yang timbul akibat infeksi HIV.",
+                        "HIV adalah virus penyebab, sedangkan AIDS adalah tahap akhir dari infeksi HIV, yang ditandai dengan munculnya berbagai penyakit infeksi oportunistik akibat lemahnya sistem kekebalan tubuh.",
+                        "Infeksi oportunistik dapat disebabkan oleh berbagai virus, jamur, dan bakteri serta dapat menyerang berbagai organ tubuh.",
+                        "Biasanya membutuhkan waktu 5 hingga 10 tahun atau lebih tergantung pada kesehatan individu dan pengobatan.",
+                        "Fase dimana tubuh sudah terinfeksi HIV, namun pada pemeriksaan antibodi di dalam darahnya masih belum ditemukan anti-HIV."
+                  ]
+            },
+            {
+                  "intent": "Pencegahan",
+                  "text": [
+                        "Bagaimana HIV dapat menyebar melalui hubungan seksual?",
+                        "Apa langkah-langkah utama untuk mencegah penularan HIV melalui hubungan seksual?",
+                        "Apa pentingnya edukasi dalam pencegahan HIV?",
+                        "Apa yang dimaksud dengan strategi harm reduction?",
+                        "Bagaimana program pemerintah berperan dalam pencegahan HIV?"
+
+                  ],
+                  "responses": [
+                        "HIV dapat menyebar melalui hubungan seksual dari pria ke wanita, wanita ke pria, maupun pria ke pria.",
+                        "Tidak melakukan hubungan seksual secara bebas.",
+                        "Edukasi membantu menyebarkan informasi tentang risiko HIV, cara pencegahan, dan pentingnya menghindari diskriminasi terhadap orang dengan HIV.",
+                        "Harm reduction adalah pendekatan untuk mengurangi dampak negatif dari perilaku berisiko, seperti menyediakan jarum suntik steril untuk pengguna narkoba.",
+                        "Pemerintah berperan melalui kebijakan seperti skrining darah donor, program PMTCT (Pencegahan Penularan dari Ibu ke Anak), dan kampanye edukasi masyarakat."
+                  ]
+            },
+            {
+                  "intent": "Dampak",
+                  "text": [
+                        "Bagaimana HIV merusak sistem kekebalan tubuh?",
+                        "Apa fungsi utama sel CD4 dalam sistem kekebalan tubuh?",
+                        "Mengapa terapi antiretroviral (ART) sangat penting bagi penderita HIV?",
+                        "Apa saja efek samping umum dari obat antiretroviral?",
+                        "Mengapa penderita HIV memerlukan pemeriksaan kesehatan rutin?"
+
+                  ],
+                  "responses": [
+                        "HIV menyerang sel CD4, menggandakan dirinya, lalu menghancurkan sel-sel tersebut, sehingga melemahkan kemampuan tubuh melawan infeksi.",
+                        "Sel CD4 berperan penting dalam mengoordinasikan respons kekebalan tubuh terhadap berbagai infeksi bakteri, virus, jamur, parasit, serta beberapa jenis kanker.",
+                        "ART menghambat replikasi HIV, menjaga jumlah sel CD4, dan mencegah perkembangan penyakit menjadi AIDS.",
+                        "Efek samping meliputi mual, muntah, diare, sakit kepala, dan ruam. Namun, efek ini biasanya berkurang seiring waktu.",
+                        "Untuk memantau perkembangan penyakit, efek samping pengobatan, dan mendeteksi komplikasi seperti penyakit jantung, ginjal, atau infeksi oportunistik."
+                  ]
+            },
+            {
+                  "intent": "Diagnostik",
+                  "text": [
+                        "Apa saja tanda-tanda awal yang dapat mengindikasikan infeksi HIV?",
+                        "Apa tes yang digunakan untuk mendiagnosis HIV pada fase awal?",
+                        "Apa tantangan dalam mendiagnosis HIV?",
+                        "Bagaimana dokter membedakan HIV akut dari penyakit tropis lainnya?",
+                        "Mengapa diagnosis dini HIV penting?"
+
+                  ],
+                  "responses": [
+                        "Tanda-tanda awal infeksi HIV meliputi demam yang disertai ruam makulopapular, ulserasi mukosa (di mulut, anus, atau penis), sindrom retroviral akut yang menyerupai flu, serta gejala neurologis seperti meningitis aseptik. Gejala-gejala ini sering kali menyerupai penyakit lain seperti dengue, tifus, leptospirosis, atau mononukleosis infeksius.",
+                        "Tes Combo HIV (antigen p24 dan antibodi HIV) adalah tes utama untuk mendeteksi infeksi pada fase awal. Tes ini dapat diikuti dengan ELISA untuk memastikan keberadaan antibodi HIV. Selain itu, hitung sel CD4 dan pengukuran viral load juga digunakan untuk mengevaluasi tingkat kerusakan sistem imun dan aktivitas virus.",
+                        "Tantangan dalam mendiagnosis HIV meliputi gejala awal yang menyerupai penyakit lain, seperti dengue atau tifus, dan kurangnya fasilitas laboratorium untuk memastikan diagnosis. Selain itu, rendahnya kesadaran dokter untuk menggali riwayat risiko pasien, seperti hubungan seksual tanpa pelindung atau penggunaan NAPZA suntik, juga sering menjadi kendala.",
+                        "Dokter dapat membedakan HIV akut dari penyakit tropis lainnya dengan memperhatikan riwayat paparan risiko, seperti hubungan seksual tanpa pelindung, serta karakteristik gejala yang berkepanjangan, seperti demam, ruam kulit, trombositopenia, lekopenia, dan peningkatan enzim transaminase (ALT/AST). Tes diagnostik seperti Combo HIV dan hitung sel CD4 juga sangat membantu.",
+                        "Diagnosis dini HIV penting karena memungkinkan pengobatan dengan terapi antiretroviral (ART) dimulai lebih awal. Hal ini membantu mencegah kerusakan lebih lanjut pada sistem kekebalan tubuh, mengurangi risiko komplikasi, dan memperpanjang harapan hidup pasien."
+                  ]
+            },
+            {
+                  "intent": "Perjalanan",
+                  "text": [
+                        "Apa yang terjadi pada tahap awal infeksi HIV (Binding)?",
+                        "Apa yang terjadi selama tahap Fusion dalam siklus hidup HIV?",
+                        "Bagaimana proses Reverse Transcription terjadi pada infeksi HIV?",
+                        "Apa yang dimaksud dengan tahap Integration dalam siklus hidup HIV?",
+                        "Apa yang terjadi pada tahap Replication?",
+                        "Apa yang terjadi pada tahap Assembly?",
+                        "Apa yang terjadi pada tahap Budding dalam siklus hidup HIV?"
+                  ],
+                  "responses": [
+                        "Pada tahap Binding, virus HIV menempel pada permukaan sel CD4. Hal ini dimungkinkan karena protein di virus HIV memungkinkan interaksi dengan reseptor pada sel CD4, sehingga virus dapat memasuki sel.",
+                        "Dalam tahap Fusion, virus HIV bergabung dengan membran sel CD4. Virus mulai memasukkan materi genetiknya ke dalam sel untuk memulai proses infeksi.",
+                        "Reverse Transcription adalah proses di mana virus HIV mengubah RNA berutas tunggal miliknya menjadi DNA berutas ganda menggunakan enzim reverse transcriptase. DNA ini kemudian bersiap untuk bergabung dengan DNA sel CD4.",
+                        "Pada tahap Integration, DNA HIV yang baru terbentuk menyelip ke dalam DNA inti sel CD4. Ketika sel CD4 mencoba memproduksi protein baru, DNA HIV yang sudah tergabung menyebabkan sel tersebut membuat lebih banyak virus HIV.",
+                        "Di tahap Replication, virus HIV memanfaatkan mekanisme sel CD4 untuk memproduksi lebih banyak komponen virus, seperti protein dan RNA yang diperlukan untuk membentuk virus HIV baru.",
+                        "Pada tahap Assembly, komponen virus HIV yang baru diproduksi berkumpul di dekat permukaan sel CD4. Namun, virus pada tahap ini masih belum matang dan belum dapat menulari sel lain.",
+                        "Pada tahap Budding, virus HIV yang telah matang dilepaskan dari permukaan sel CD4. Virus ini kemudian siap menyerang dan menginfeksi sel CD4 lainnya."
+                  ]
+            },
+            {
+                  "intent": "Pengobatan", 
+                  "text": [
+                        "Apakah ada obat yang dapat menyembuhkan HIV?",
+                        "Bagaimana cara kerja obat antiretroviral (ARV)?",
+                        "Apa saja jenis obat ARV yang tersedia?",
+                        "Mengapa penting untuk segera memulai pengobatan ARV setelah didiagnosis HIV?",
+                        "Apa efek samping yang mungkin muncul dari penggunaan ARV?",
+                        "Mengapa pasien HIV dianjurkan memiliki asuransi kesehatan?"
+
+                  ],
+                  "responses": [
+                        "Sampai saat ini, belum ada obat yang dapat menyembuhkan HIV. Namun, ada obat antiretroviral (ARV) yang dapat memperlambat perkembangan virus dan membantu menjaga sistem kekebalan tubuh.",
+                        "ARV bekerja dengan menghilangkan unsur yang diperlukan oleh virus HIV untuk menggandakan diri. Obat ini juga mencegah virus HIV menghancurkan sel CD4, yang sangat penting untuk sistem kekebalan tubuh.",
+                        "Beberapa jenis obat ARV meliputi (Dolutegravir, Efavirenz, Etravirine, Nevirapine, Lamivudin, Zidovudin, Emtricitabine-tenofovir)." ,
+                        "Memulai pengobatan segera dapat membantu mengendalikan perkembangan virus, mencegah kerusakan lebih lanjut pada sistem kekebalan tubuh, dan mengurangi risiko berkembangnya HIV menjadi AIDS.",
+                        "Efek samping ARV meliputi (Pusing, Sakit kepala, Mual dan muntah, Diare, Mulut kering, Tulang rapuh, Kadar gula darah tinggi, Kadar kolesterol tidak normal, Kerusakan jaringan otot (rhabdomyolysis), Penyakit jantung, Sulit tidur, Tubuh terasa lelah).",
+                        "Proses pengobatan HIV membutuhkan waktu lama dan biaya yang cukup besar. Dengan asuransi kesehatan, pasien dapat menjalani pengobatan secara lebih optimal tanpa terlalu khawatir dengan biaya pengobatan."
+
+                  ]
+            },
+            { 
+                  "intent": "Penularan",
+                  "text": [
+                        "Apa saja cara penularan virus HIV?",
+                        "Mengapa hubungan seks tanpa kondom berisiko menularkan HIV?",
+                        "Bagaimana cara mencegah penularan HIV dari ibu hamil ke bayi?",
+                        "Apa yang dapat dilakukan untuk mencegah penularan HIV melalui jarum suntik?",
+                        "Apakah transfusi darah dapat menularkan HIV?",
+                        "Apa saja risiko yang dapat terjadi jika cairan tubuh dari penderita HIV tertukar dengan orang sehat?"
+
+                  ],
+                  "responses": [
+                        "Hubungan Seks Tanpa Alat Pengaman, Berbagi Alat Suntik, Ibu Hamil ke Bayi, Transfusi Darah, Seks Oral, Pertukaran Cairan Vagina atau Sperma, Ibu yang terinfeksi HIV dan menyusui dapat menularkan virus kepada bayinya melalui ASI.",
+                        "Tanpa kondom, ada risiko pertukaran cairan tubuh seperti darah, air mani, atau cairan vagina, yang dapat mengandung virus HIV. Hal ini memudahkan virus HIV untuk masuk ke tubuh pasangan yang belum terinfeksi.",
+                        "Untuk mencegah penularan HIV dari ibu ke bayi, ibu hamil yang positif HIV harus menjalani pengobatan ARV yang dapat mengurangi risiko penularan kepada bayi. Selain itu, ibu tidak dianjurkan untuk memberikan ASI kepada bayinya setelah melahirkan.",
+                        "Untuk mencegah penularan HIV melalui jarum suntik, sangat penting untuk tidak berbagi jarum suntik dengan orang lain, terutama bagi pengguna narkoba. Penggunaan jarum suntik sekali pakai yang steril juga sangat dianjurkan.",
+                        "Ya, transfusi darah yang tercemar dengan darah dari pendonor yang terinfeksi HIV dapat menularkan virus ini. Oleh karena itu, sangat penting untuk memastikan bahwa darah yang digunakan dalam transfusi telah melalui tes yang ketat untuk mendeteksi HIV.",
+                        "Jika cairan tubuh seperti sperma, cairan vagina, atau darah dari penderita HIV tertukar dengan orang yang sehat, virus HIV dapat masuk ke tubuh orang tersebut, yang berisiko menyebabkan infeksi HIV."
+                  ]
+            },
+            {
+                  "intent": "Epidemiologi",
+                  "text": [
+                        "Berapa jumlah orang yang hidup dengan HIV di seluruh dunia pada tahun 2020?",
+                        "Apa persentase orang yang hidup dengan HIV yang mengetahui status mereka pada tahun 2020 secara global?",
+                        "Berapa angka kasus baru infeksi HIV yang tercatat di seluruh dunia pada tahun 2020?",
+                        "Apa faktor utama yang berkontribusi pada penyebaran HIV di Indonesia?",
+                        "Seberapa besar penurunan angka kematian akibat HIV/AIDS di tingkat global dibandingkan dengan tahun 2010?"
+
+                  ],
+                  "responses": [
+                        "Pada tahun 2020, terdapat 37,7 juta orang yang hidup dengan HIV di seluruh dunia, dengan sebaran terbesar di Afrika (67,4%).",
+                        "Secara global, 84% orang dengan HIV mengetahui status mereka melalui tes skrining dan diagnostik pada akhir tahun 2020.",
+                        "Pada tahun 2020, terdapat 1,5 juta kasus baru infeksi HIV di dunia, dengan 150.000 di antaranya terjadi pada anak-anak berusia di bawah 15 tahun.",
+                        "Di Indonesia, infeksi HIV dominan ditemukan pada populasi kunci seperti laki-laki seks dengan laki-laki (LSL), pengguna narkoba suntik, waria, dan pekerja seks.",
+                        "Dibandingkan dengan tahun 2010, angka kematian akibat HIV/AIDS global mengalami penurunan sebesar 47%, berkat peningkatan akses terhadap terapi ARV dan perawatan yang lebih baik."
+                  ]
+            },
+            {
+            }
+      ]
+}
