@@ -2,7 +2,8 @@
 
 ## 1. **DATASET**  
 
-[datasetDL.json](https://github.com/user-attachments/files/17963940/datasetDL.json) merupakan struktur data berbasis JSON yang dirancang untuk menyimpan informasi tentang berbagai aspek terkait HIV/AIDS. Berikut adalah rincian strukturnya:  
+[datasetDL.json](https://github.com/user-attachments/files/17963940/datasetDL.json) 
+merupakan struktur data berbasis JSON yang dirancang untuk menyimpan informasi tentang berbagai aspek terkait HIV/AIDS. Berikut adalah rincian strukturnya:  
 
 ### **1.1. Pengelompokan Berdasarkan Intent (Tujuan)**  
 Dataset dikelompokkan berdasarkan beberapa kategori *intent* untuk mengorganisir pertanyaan dan jawaban sesuai topik, meliputi:  
