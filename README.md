@@ -34,4 +34,4 @@ Bagian ini menyediakan penjelasan detail untuk setiap pertanyaan yang ada pada b
 ## Flowchart 
 
 ## Tautan Kelompok 19
-Kunjungi Notin Kami di[Notion](https://organized-mandolin-c9d.notion.site/Deep-Learning-Kelompok-19-13232a2311c2809890ebca611ae2339b)
+Kunjungi Notion Kami: [Notion](https://organized-mandolin-c9d.notion.site/Deep-Learning-Kelompok-19-13232a2311c2809890ebca611ae2339b)
