@@ -32,4 +32,4 @@ Bagian ini berisi daftar pertanyaan yang relevan dengan masing-masing *intent*.
 Bagian ini menyediakan penjelasan detail untuk setiap pertanyaan yang ada pada bagian *text*.  
 - Jawaban disusun berdasarkan informasi berbasis fakta, analisis mendalam, serta langkah-langkah strategis terkait informasi HIV/AIDS.
 
-### **[Notion](https://organized-mandolin-c9d.notion.site/Deep-Learning-Kelompok-19-13232a2311c2809890ebca611ae2339b) **
+### *[Notion](https://organized-mandolin-c9d.notion.site/Deep-Learning-Kelompok-19-13232a2311c2809890ebca611ae2339b)*
