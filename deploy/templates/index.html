@@ -10,7 +10,7 @@
     <div class="chat-container">
         <h1>EduHIV Chatbot</h1>
         <div id="chat-box">
-            <div class="bot-message">Hai! Selamat datang di HiVMate. Apa yang ingin Anda ketahui tentang HIV?</div>
+            <div class="bot-message">Hai! Selamat datang di EduHIV. Apa yang ingin Anda ketahui tentang HIV?</div>
         </div>
         <form id="chat-form">
             <input type="text" id="user-input" placeholder="Ketik pesan Anda..." autocomplete="off" required>
@@ -21,23 +21,34 @@
         const form = document.getElementById('chat-form');
         const chatBox = document.getElementById('chat-box');
 
+        // Fungsi untuk mengirim data dan menerima respons dari server
         form.addEventListener('submit', async (e) => {
             e.preventDefault();
 
+            // Ambil input pengguna
             const userInput = document.getElementById('user-input').value;
             addMessage(userInput, 'user-message');
-            
-            const response = await fetch('/get_response', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ user_input: userInput })
-            });
-            const data = await response.json();
-            addMessage(data.response, 'bot-message');
 
+            try {
+                // Kirim data ke server menggunakan fetch
+                const response = await fetch('/get_response', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ user_input: userInput })
+                });
+
+                // Ambil respons dari server
+                const data = await response.json();
+                addMessage(data.response, 'bot-message');
+            } catch (error) {
+                addMessage("Maaf, ada kesalahan. Silakan coba lagi.", 'bot-message');
+            }
+
+            // Kosongkan input pengguna
             document.getElementById('user-input').value = '';
         });
 
+        // Fungsi untuk menambahkan pesan ke chat-box
         function addMessage(text, className) {
             const message = document.createElement('div');
             message.className = className;

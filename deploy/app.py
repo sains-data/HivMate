@@ -1,17 +1,26 @@
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, jsonify
+from sentence_transformers import SentenceTransformer
+from sklearn.metrics.pairwise import cosine_similarity
+import numpy as np
+import json
 
+# Inisialisasi Flask app dan model
 app = Flask(__name__)
+model = SentenceTransformer("distiluse-base-multilingual-cased-v2")
 
-# Data edukasi untuk chatbot
-responses = {
-    "hello": "Hai! Selamat datang di EduHIV. Apa yang bisa saya bantu hari ini?",
-    "hiv": "HIV adalah virus yang menyerang sistem kekebalan tubuh. Apakah Anda ingin tahu tentang gejala, pencegahan, atau pengobatan?",
-    "gejala": "Gejala awal HIV seringkali seperti flu: demam, sakit kepala, nyeri otot. Namun, banyak orang tidak menunjukkan gejala selama bertahun-tahun.",
-    "pencegahan": "Pencegahan HIV meliputi penggunaan kondom, tidak berbagi jarum suntik, dan menggunakan PrEP (Pre-Exposure Prophylaxis).",
-    "pengobatan": "HIV tidak bisa disembuhkan, tetapi dapat dikelola dengan ART (Antiretroviral Therapy) untuk hidup sehat.",
-    "terima kasih": "Sama-sama! Jangan ragu untuk bertanya jika ada hal lain yang ingin Anda ketahui.",
-    "default": "Maaf, saya tidak mengerti. Bisa dijelaskan lebih detail?"
-}
+# Baca data dari file JSON
+with open("datasetDL.json", "r", encoding="utf-8") as file:
+    data = json.load(file)
+
+# Parsing intents dari JSON
+questions = []
+responses = []
+for intent in data["intents"]:
+    questions.extend(intent["text"])
+    responses.extend(intent["responses"])
+
+# Hitung embeddings dataset untuk prediksi berbasis ML
+question_embeddings = model.encode(questions)
 
 @app.route("/")
 def home():
@@ -19,9 +28,17 @@ def home():
 
 @app.route("/get_response", methods=["POST"])
 def get_response():
-    user_input = request.form["user_input"].lower()
-    response = responses.get(user_input, responses["default"])
-    return {"response": response}
+    data = request.json  # Menerima data JSON dari request
+    user_input = data.get("user_input", "").lower()
+
+    # Hitung embedding input pengguna
+    user_embedding = model.encode([user_input])
+    similarities = cosine_similarity(user_embedding, question_embeddings)
+    best_match_idx = np.argmax(similarities)
+
+    # Ambil respons berbasis kemiripan tertinggi
+    response = responses[best_match_idx]
+    return jsonify({"response": response})
 
 if __name__ == "__main__":
     app.run(debug=True)
