@@ -1,1 +1,6 @@
 streamlit
+Flask
+sentence_transformers
+sklearn 
+numpy
+json
