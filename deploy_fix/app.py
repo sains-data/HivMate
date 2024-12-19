@@ -27,9 +27,9 @@ with col1:
     st.image("HivMate/deploy_fix/Logo_ITERA.png", width=200)  
 
 with col2:
-    st.image("HivMate/deploy_fix/sd.jpg", width=200) 
+    st.image("deploy_fix/sd.jpg", width=200) 
 with col3:
-    st.image("HivMate/deploy_fix/hivmate-01.png", width=250)
+    st.image("deploy_fix/hivmate-01.png", width=250)
 
 st.markdown("""
     <style>
