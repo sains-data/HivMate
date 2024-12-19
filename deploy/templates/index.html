@@ -1,61 +1,88 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EduHIV Chatbot</title>
-    <link rel="stylesheet" href="/static/style.css">
-</head>
-<body>
-    <div class="chat-container">
-        <h1>EduHIV Chatbot</h1>
-        <div id="chat-box">
-            <div class="bot-message">Hai! Selamat datang di EduHIV. Apa yang ingin Anda ketahui tentang HIV?</div>
-        </div>
-        <form id="chat-form">
-            <input type="text" id="user-input" placeholder="Ketik pesan Anda..." autocomplete="off" required>
-            <button type="submit">Kirim</button>
-        </form>
-    </div>
-    <script>
-        const form = document.getElementById('chat-form');
-        const chatBox = document.getElementById('chat-box');
+import streamlit as st
+from sentence_transformers import SentenceTransformer
+from sklearn.metrics.pairwise import cosine_similarity
+import numpy as np
+import json
+import os
 
-        // Fungsi untuk mengirim data dan menerima respons dari server
-        form.addEventListener('submit', async (e) => {
-            e.preventDefault();
+# Load dataset
+file_path = os.path.join(os.path.dirname(__file__), "datasetDL.json")
+with open(file_path, "r", encoding="utf-8") as file:
+    data = json.load(file)
 
-            // Ambil input pengguna
-            const userInput = document.getElementById('user-input').value;
-            addMessage(userInput, 'user-message');
+# Initialize model
+model = SentenceTransformer("distiluse-base-multilingual-cased-v2")
 
-            try {
-                // Kirim data ke server menggunakan fetch
-                const response = await fetch('/get_response', {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify({ user_input: userInput })
-                });
+questions = []
+responses = []
+for intent in data["intents"]:
+    questions.extend(intent["text"])
+    responses.extend(intent["responses"])
 
-                // Ambil respons dari server
-                const data = await response.json();
-                addMessage(data.response, 'bot-message');
-            } catch (error) {
-                addMessage("Maaf, ada kesalahan. Silakan coba lagi.", 'bot-message');
-            }
+question_embeddings = model.encode(questions)
 
-            // Kosongkan input pengguna
-            document.getElementById('user-input').value = '';
-        });
+# Set Streamlit page config
+st.set_page_config(page_title="Chatbot Edukasi HIV", page_icon="🎗️", layout="wide")
 
-        // Fungsi untuk menambahkan pesan ke chat-box
-        function addMessage(text, className) {
-            const message = document.createElement('div');
-            message.className = className;
-            message.innerText = text;
-            chatBox.appendChild(message);
-            chatBox.scrollTop = chatBox.scrollHeight;
+st.markdown(
+    """
+    <style>
+        .chat-container {
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 10px;
+            max-width: 700px;
+            margin: auto;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            font-family: Arial, sans-serif;
         }
-    </script>
-</body>
-</html>
+        .user-message {
+            background-color: #0084FF;
+            color: white;
+            padding: 10px;
+            border-radius: 10px;
+            text-align: right;
+            margin-bottom: 10px;
+            max-width: 70%;
+            float: right;
+            clear: both;
+        }
+        .bot-message {
+            background-color: #f1f0f0;
+            color: black;
+            padding: 10px;
+            border-radius: 10px;
+            text-align: left;
+            margin-bottom: 10px;
+            max-width: 70%;
+            float: left;
+            clear: both;
+        }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
+
+st.markdown('<div class="chat-container">', unsafe_allow_html=True)
+
+if "chat_history" not in st.session_state:
+    st.session_state["chat_history"] = []
+
+user_input = st.text_input("Tulis pertanyaan Anda di sini:", placeholder="Contoh: Apa itu HIV?", key="user_input")
+
+if user_input:
+    user_embedding = model.encode([user_input])
+    similarities = cosine_similarity(user_embedding, question_embeddings)
+    best_match_idx = np.argmax(similarities)
+    response = responses[best_match_idx]
+
+    st.session_state["chat_history"].append(("user", user_input))
+    st.session_state["chat_history"].append(("bot", response))
+
+for sender, message in st.session_state["chat_history"]:
+    if sender == "user":
+        st.markdown(f'<div class="user-message">{message}</div>', unsafe_allow_html=True)
+    else:
+        st.markdown(f'<div class="bot-message">{message}</div>', unsafe_allow_html=True)
+
+st.markdown('</div>', unsafe_allow_html=True)
