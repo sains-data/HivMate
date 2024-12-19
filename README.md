@@ -54,12 +54,12 @@ Struktur dataset meliputi pertanyaan (`text`) dan jawaban (`responses`) yang rel
 
 ## **Kontributor**  
 👩‍💻 **Kelompok 19**  
-- [Nama 1](https://github.com/Martinexe4)  
-- [Nama 2](https://github.com/ARafiPrnggm)  
-- [Nama 3](https://github.com/annisacahyanisurya)
-- [Nama 4](https://github.com/devinaanin)
-- [Nama 5](https://github.com/NadindaAurora)
-- [Nama 6](https://github.com/silviaazahra)
+- [Martin Ompusunggu](https://github.com/Martinexe4)  
+- [A Rafi Paringgom Iwari](https://github.com/ARafiPrnggm)  
+- [Annisa Cahyani Surya](https://github.com/annisacahyanisurya)
+- [Devina Anin Savitri](https://github.com/devinaanin)
+- [Nadinda Naurora](https://github.com/NadindaAurora)
+- [Silvia Azahrani](https://github.com/silviaazahra)
 
 ---
 
