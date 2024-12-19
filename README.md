@@ -1,7 +1,7 @@
 # **HiVMate**  
 🌟 **Pengembangan Model Text Generation dengan Transformer untuk Pemantauan dan Edukasi HIV/AIDS** 🌟  
 
-![HiVMate Logo](deploy_fix/hivmate-01.png)  
+![HiVMate Logo](deploy_fix/hivmate-01.png, 120)  
 
 ## **Tentang Proyek Ini**  
 HiVMate adalah aplikasi berbasis *deep learning* yang menggunakan model Transformer untuk menghasilkan teks edukatif terkait HIV/AIDS. Proyek ini bertujuan untuk memberikan pemahaman yang mendalam, akurat, dan berbasis data tentang HIV/AIDS, serta meningkatkan kesadaran masyarakat.  
