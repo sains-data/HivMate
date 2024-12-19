@@ -54,9 +54,12 @@ Struktur dataset meliputi pertanyaan (`text`) dan jawaban (`responses`) yang rel
 
 ## **Kontributor**  
 👩‍💻 **Kelompok 19**  
-- [Nama 1](https://github.com/nama1)  
-- [Nama 2](https://github.com/nama2)  
-- *(dan lainnya)*  
+- [Nama 1](https://github.com/Martinexe4)  
+- [Nama 2](https://github.com/ARafiPrnggm)  
+- [Nama 3](https://github.com/annisacahyanisurya)
+- [Nama 4](https://github.com/devinaanin)
+- [Nama 5](https://github.com/NadindaAurora)
+- [Nama 6](https://github.com/silviaazahra)
 
 ---
 
