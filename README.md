@@ -33,6 +33,6 @@ Bagian ini menyediakan penjelasan detail untuk setiap pertanyaan yang ada pada b
 - Jawaban disusun berdasarkan informasi berbasis fakta, analisis mendalam, serta langkah-langkah strategis terkait informasi HIV/AIDS.
 ## Flowchart 
 ![Flowchart](Diagram/Flowchart_HiVMate.png)
-## Tautan Kelompok 19
-Apps HiVMate : [HiVMate](https://2zxeyainqmusivc5ttnpcy.streamlit.app/)
+## Tautan Kelompok 19 
+Apps HiVMate : [HiVMate](https://2zxeyainqmusivc5ttnpcy.streamlit.app/) \\
 Kunjungi Notion Kami: [Notion](https://organized-mandolin-c9d.notion.site/Deep-Learning-Kelompok-19-13232a2311c2809890ebca611ae2339b)
